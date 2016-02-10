@@ -1,0 +1,60 @@
+\ProvidesPackage{beamerthemeCenterForEnergyInformaticsPoster} 
+\RequirePackage{xcolor}
+\RequirePackage{graphicx}
+\RequirePackage{lmodern}
+\selectcolormodel{rgb}
+\mode<presentation>
+
+\graphicspath{{img/}}
+
+\definecolor{sdugreen}{HTML}{608e3c}
+
+\setbeamercolor{headline}{fg=white,bg=sdugreen}
+\setbeamercolor{title in headline}{fg=white}
+\setbeamercolor{author in headline}{fg=white}
+\setbeamercolor{institute in headline}{fg=white}
+\setbeamercolor*{block body}{fg=black}
+\setbeamercolor*{block title}{fg=white,bg=sdugreen}
+\setbeamertemplate{navigation symbols}{}  % no navigation on a poster
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{block begin}{
+  \begin{beamercolorbox}[wd=\textwidth,sep=0.7ex]{block title}%
+    \usebeamerfont*{block title}%
+    {\hspace{1.5ex}\normalsize\bfseries\insertblocktitle}
+  \end{beamercolorbox}
+  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+  \usebeamerfont{block body}%
+  \begin{beamercolorbox}[leftskip=2em,colsep*=.75ex,sep=0.5ex,vmode]{block body}%
+    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+    \normalsize\bfseries
+  }
+  \setbeamertemplate{block end}{
+  \end{beamercolorbox}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setbeamertemplate{headline}{  
+	\begin{beamercolorbox}[wd=\paperwidth,ht=0.103\paperwidth]{headline}
+		\includegraphics{top.pdf}\\
+	\end{beamercolorbox}
+  	\vspace{-10px}
+  	\begin{beamercolorbox}[wd=\paperwidth,ht=0.21\paperwidth]{headline}
+		\begin{columns}[c]
+	      \begin{column}{.01\paperwidth}
+	      \end{column}
+	      \begin{column}{0.92\paperwidth}
+	        %\vskip15ex
+	        \usebeamercolor{title in headline}{\color{fg}\textbf{\Huge{\inserttitle}}\\[4ex]}
+	    %\vfill
+	    \usebeamercolor{author in headline}{\color{fg}\normalsize{\textbf{\insertauthor}}\\[1ex]}    
+	      \end{column}
+	      \begin{column}{.02\paperwidth}
+	      \end{column}
+	    \end{columns}
+	    \vskip2ex
+  	\end{beamercolorbox}
+  	\vskip2ex
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
