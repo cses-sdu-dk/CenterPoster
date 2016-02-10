@@ -35,24 +35,32 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setbeamertemplate{headline}{  
-	\begin{beamercolorbox}[wd=\paperwidth,ht=0.103\paperwidth]{headline}
-		\includegraphics{top.pdf}\\
+	\begin{beamercolorbox}[wd=\paperwidth,ht=0.115\paperwidth]{headline}
+		\hspace{1.5ex}\includegraphics[width=18cm]{top.png}\\
 	\end{beamercolorbox}
   	\vspace{-10px}
-  	\begin{beamercolorbox}[wd=\paperwidth,ht=0.21\paperwidth]{headline}
+  	\begin{beamercolorbox}[wd=\paperwidth,ht=0.205\paperwidth]{headline}
 		\begin{columns}[c]
 	      \begin{column}{.01\paperwidth}
 	      \end{column}
 	      \begin{column}{0.92\paperwidth}
 	        %\vskip15ex
-	        \usebeamercolor{title in headline}{\color{fg}\textbf{\Huge{\inserttitle}}\\[4ex]}
+	        \begin{minipage}[b]{0.92\paperwidth}
+	        	\raggedright
+	        	\normalbaselines
+	        	\usebeamercolor{title in headline}
+	        	\color{fg}
+	        	\bfseries
+	        	\Huge
+	        	\inserttitle
+	        \end{minipage}\\[4ex]
 	    %\vfill
 	    \usebeamercolor{author in headline}{\color{fg}\normalsize{\textbf{\insertauthor}}\\[1ex]}    
 	      \end{column}
 	      \begin{column}{.02\paperwidth}
 	      \end{column}
 	    \end{columns}
-	    \vskip2ex
+	    \vskip5ex
   	\end{beamercolorbox}
   	\vskip2ex
 }
